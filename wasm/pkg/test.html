@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinyin to Hanzi Test</title>
+    <script type="module">
+        import init, { pinyin_to_hanzi } from "./pinyin_to_hanzi.js";
+
+        async function initializeWASM() {
+            await init(); // Initialize the WASM module
+        }
+
+        async function runTest() {
+            const pinyinInput = document.getElementById('pinyinInput').value;
+            const result = pinyin_to_hanzi(pinyinInput);
+            document.getElementById('output').innerText = result; // Displaying it in the HTML
+        }
+
+        window.runTest = runTest; // Expose the function to window to be accessible from the HTML button click
+
+        initializeWASM(); // Initialize WASM as soon as the script loads
+    </script>
+</head>
+
+<body>
+    <h1>Pinyin to Hanzi Test</h1>
+    <label for="pinyinInput">Enter Pinyin:</label>
+    <input type="text" id="pinyinInput" placeholder="Type pinyin here...">
+    <button onclick="runTest()">Submit</button>
+    <p>Result: <span id="output"></span></p>
+</body>
+
+</html>

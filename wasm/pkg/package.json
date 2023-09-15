@@ -1,0 +1,35 @@
+{
+  "name": "pinyin_to_hanzi",
+  "version": "0.1.0",
+  "files": [
+    "pinyin_to_hanzi_bg.wasm",
+    "pinyin_to_hanzi.js",
+    "pinyin_to_hanzi.d.ts"
+  ],
+  "module": "pinyin_to_hanzi.js",
+  "types": "pinyin_to_hanzi.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ],
+  "description": "A package to convert pinyin to hanzi (Chinese character) eg: \"nihao\" -> \"你好\"",
+  "main": "pinyin_to_hanzi.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/torphix/pinyin-hanzi-wasm.git#main"
+  },
+  "keywords": [
+    "pinyin",
+    "hanzi",
+    "chinese",
+    "converter"
+  ],
+  "author": "Jesse Deng",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/torphix/pinyin-hanzi-wasm/issues"
+  },
+  "homepage": "https://github.com/torphix/pinyin-hanzi-wasm/tree/main#readme"
+}
