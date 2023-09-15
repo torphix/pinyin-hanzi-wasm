@@ -1,0 +1,24 @@
+{
+  "name": "pinyin-hanzi-converter",
+  "version": "1.0.0",
+  "description": "Converts pinyin to hanzi using WASM",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/torphix/pinyin-hanzi-wasm.git"
+  },
+  "keywords": [
+    "pinyin",
+    "hanzi",
+    "converter"
+  ],
+  "author": "Jesse Deng",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/torphix/pinyin-hanzi-wasm/issues"
+  },
+  "homepage": "https://github.com/torphix/pinyin-hanzi-wasm#readme"
+}

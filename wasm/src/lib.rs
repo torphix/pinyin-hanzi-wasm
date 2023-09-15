@@ -2,14 +2,14 @@ use serde::{Deserialize, Serialize};
 use std::fs::File;
 use std::io::{BufRead, BufReader, BufWriter};
 use std::path::Path;
-use wasm_bindgen::prelude::*;
+// use wasm_bindgen::prelude::*;
 
 #[derive(Serialize, Deserialize)]
 struct Mapping {
     data: Vec<(i32, String, String)>,
 }
 
-#[wasm_bindgen]
+// #[wasm_bindgen]
 pub fn pinyin_to_hanzi(pinyin: &str) -> String {
     let path = Path::new("mapping.json");
 
@@ -23,7 +23,7 @@ pub fn pinyin_to_hanzi(pinyin: &str) -> String {
         data = saved_data.data;
     } else {
         // Otherwise, load and sort the data
-        let file = File::open("mapping.txt").map_err(|e| e.to_string()).unwrap();
+        let file = File::open("./mapping.txt").map_err(|e| e.to_string()).unwrap();
         let reader = BufReader::new(file);
         data = load_and_sort_data(reader).map_err(|e| e.to_string()).unwrap();
 
@@ -90,3 +90,4 @@ fn load_and_sort_data<R: BufRead>(reader: R) -> std::io::Result<Vec<(i32, String
 
     Ok(data)
 }
+
