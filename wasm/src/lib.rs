@@ -2,14 +2,14 @@ use serde::{Deserialize};
 mod mapping; // Declare the module
 use mapping::get_mapping; // Use the function from the module
 
-// use wasm_bindgen::prelude::*;
+use wasm_bindgen::prelude::*;
 
 #[derive(Debug, Deserialize)]
 struct Mapping {
     data: Vec<(i32, String, String)>,
 }
 
-// #[wasm_bindgen]
+#[wasm_bindgen]
 pub fn pinyin_to_hanzi(pinyin: &str) -> String {
     let data: Mapping = serde_json::from_str(get_mapping()).unwrap();
     let result = find_characters(&data.data, pinyin);
@@ -52,6 +52,3 @@ fn find_characters(data: &Vec<(i32, String, String)>, text: &str) -> Result<Vec<
 }
 
 
-fn main(){
-    println!("{}", pinyin_to_hanzi("ni"));  
-}
