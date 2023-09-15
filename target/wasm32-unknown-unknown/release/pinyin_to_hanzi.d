@@ -1,0 +1,1 @@
+/home/j/Desktop/Code/polylingo/scripts/chinese/pinyin_to_hanzi/pinyin_to_hanzi/target/wasm32-unknown-unknown/release/pinyin_to_hanzi.wasm: /home/j/Desktop/Code/polylingo/scripts/chinese/pinyin_to_hanzi/pinyin_to_hanzi/src/lib.rs
